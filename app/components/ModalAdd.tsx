@@ -45,15 +45,13 @@ function ModalAdd({ HandleCloseModal, setIsModalOpen, isModalOpen,session }: Pro
               notify('Group Added Successfully');
               HandleCloseModal()
               console.log("Document written with ID: ", docRef.id);
-        }
-          
+        }    
     } 
-
 
     return (
         <div className='grid place-items-center w-full h-screen  bg-black/25 fixed inset-0 z-50'>
             <AnimatePresence>
-                <motion.div className='bg-[#120f13] w-[30%] h-[24rem] relative aspect-3/2  rounded-md shadow-xl '>
+                <motion.div className='bg-[#120f13] md:w-[30%] h-[24rem] relative   rounded-md shadow-xl '>
                     <XMarkIcon onClick={() => HandleCloseModal()} className='w-8 h-8 cursor-pointer absolute right-0 top-0 m-2' />
                     <div className='Container w-full h-full px-5 py-5 rounded-md'>
                         <form onSubmit={HandleAddNewChannel} className='grid gap-5'>
